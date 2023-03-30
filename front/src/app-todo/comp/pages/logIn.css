@@ -1,0 +1,74 @@
+.btn{
+    width:100px;
+    padding: 5px;
+    padding-left:100px;
+    padding-right: 80px;
+    border-radius:35px;
+    text-align: center;
+    box-shadow:2px 2px 2px gray;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-family: 'RocknRoll One', sans-serif;
+    text-decoration: none;
+ }
+ .btn-sign{
+  background-color: #E56841;
+  
+  color : black;
+ 
+ }
+ 
+ .subtitle-signin{
+     color: rgb(80, 77, 77);
+     
+ }
+ 
+ h1{
+     color: #000000;
+     margin-bottom: 4rem;
+ 
+ }
+ 
+ .subtitle{
+ color:#E56841;
+ 
+ }
+ 
+ .btn-login{
+     background-color: black;
+     color : white;
+     font-family: RocknRoll One;
+ }
+ .card{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     width:350px;
+     height: 80%;
+     background-color: white;
+     border-radius: 6%;
+     box-shadow:5px 5px 5px #5519079f;
+ 
+ }
+ .cardContainer{
+ 
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     flex-direction: column;
+ }
+ .buttons {
+     justify-content: center;
+     align-items: center;
+ }
+ .container{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         height: 90%;
+         background: rgb(229,104,65);
+         background: rgb(245,241,177);
+         background: radial-gradient(circle, rgba(245,241,177,1) 0%, rgba(229,104,65,1) 47%);
+     }

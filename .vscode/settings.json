@@ -1,0 +1,8 @@
+{
+    "githubIssues.ignoreMilestones": [
+
+    ],
+    "git.scanRepositories": [
+        "C:\\Program Files\\Git\\cmd\\"
+    ]
+}
