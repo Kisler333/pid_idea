@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import { createContext } from 'react'
 
@@ -6,14 +5,51 @@ import { createContext } from 'react'
 const AppContext = createContext()
 
 const Provider = ({children}) => {
-  const [usersTopics,setUsersTopics] = useState([])
+  //const [usersTopics,setUsersTopics] = useState([])
+  let arrayTopics=[]
+  let gmail
+  let password
+  let passwordConfirm
+  let age
+  let gender
+
+  const createUser=(user)=>{
+    gmail=user.gmail
+    password=user.password
+    passwordConfirm=user.passwordConfirm
+    age=user.age
+    gender=user.gender
+  }
+
+  const returnUser=()=>{
+    return {gmail, password, passwordConfirm,age,gender}
+  }
+
   const addUsersTopic = (topic)=>{
-    setUsersTopics([...usersTopics, topic])
+    console.log(topic)
+   // setUsersTopics([...usersTopics, topic])
+    //setUsersTopics(usersTopics.push(topic))
+    arrayTopics.push(topic)
+    console.log(arrayTopics)
   }
   const removeUsersTopic = (topic)=>{
-    const filteredTopics = usersTopics.filter(el=> el.title !== topic)
-    setUsersTopics(filteredTopics)
+    console.log(topic)
+    const filteredTopics = arrayTopics.filter(el=> el.title !== topic.title)
+    //console.log(usersTopics)
+    console.log(filteredTopics)
+    arrayTopics=filteredTopics
+    //setUsersTopics(filteredTopics)
   }
+  const returnTopics = ()=>{
+    console.log(arrayTopics);
+    let titles=[]
+    for (let index = 0; index < arrayTopics.length; index++) {
+      titles[index]=arrayTopics[index].title      
+    }
+    console.log(titles);
+    return titles
+  }
+
   const topics=[
     {
     title:'Cooking',
@@ -57,7 +93,10 @@ const Provider = ({children}) => {
     const sharedValue = {
       topics,
       addUsersTopic,
-      removeUsersTopic
+      removeUsersTopic,
+      returnTopics,
+      returnUser,
+      createUser
     }
   return (
     <AppContext.Provider value={sharedValue}>

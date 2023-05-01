@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Login from '../login-page/logIn'
 import SignIn from '../signIn-page/signIn'
  import SignUp from '../signUp-page/signUp'
 import './homePage.css'
+import Dashboard from '../dashboard/dashboard'
+//import Dashboard from '../dashboard/dashboard'
  
 
 const HomePage = () => {
   const [mode, setMode] = useState('home')
+  const to=useNavigate();
   const handleLoginMode = ()=>{
     setMode('login')
   }
@@ -25,7 +28,7 @@ const HomePage = () => {
 
   if (mode ==='login'){
     welcome = <div ><h1 className='text-dark' >Welcome to PidIdea!</h1><h3 className='subtitle'>Let's get started:)</h3></div>
-    content = <Login/>
+    content = <Login handleSuccess={()=>{setMode('dashboard')}}/>
   }
   if(mode ==='sign'){
     welcome = <div ><h1 className='text-dark' >Welcome to PidIdea!</h1><h3 className='subtitle'>Nice to meet you:)</h3></div>
@@ -34,9 +37,16 @@ const HomePage = () => {
   if (mode ==='continue'){
     welcome = <div ><h4 className='text-dark' >Tell us what you’re interested in</h4>
     <h6 className='subtitle'>*Pick at least 1 topic</h6></div>
-    content = <SignUp/>
+     content = <SignUp/>
+    //content = <Dashboard/>
   }
-
+  if(mode==="dashboard"){
+    welcome=<div ><h4 className='text-dark' >walabala bitches</h4>
+    </div>
+    //return <Dashboard/>
+    to('/dashboard');
+    console.log("walabala");
+  }
   return (
     <div className='container main'>
       <div className='card text-center'>

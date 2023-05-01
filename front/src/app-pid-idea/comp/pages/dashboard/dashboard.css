@@ -1,0 +1,197 @@
+
+  
+  .menuContainer {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+    position: fixed;
+    top: 0;
+    left: 50px;
+    /* background: #ffffff; */
+  }
+  
+  .subMenu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .MuiSvgIcon-root {
+    color: #313233;
+    font-size: 18px;
+  }
+  
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+    min-width: 40px;
+    /* border: 2px solid #757677; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: 15px 0;
+    /* box-shadow: 0px 5px 20px rgb(0, 0, 0); */
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .iconContainer.black,
+  .iconContainer:hover {
+    background: #E56841;
+  }
+  
+  .iconContainer.black .MuiSvgIcon-root,
+  .iconContainer:hover .MuiSvgIcon-root {
+    color: #feffff;
+  }
+  
+  .logo {
+    width: 60px;
+    min-width: 60px;
+    border-radius: 30px;
+  }
+  
+  main {
+    flex: 1;
+    height: 100%;
+    padding-top: 35px;
+    margin-left: 90px;
+    margin-left: 150px;
+    /* background: #ffffff; */
+  }
+  
+  .searchBox {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    background: #ffffff;
+    border: 2px solid  #000000;
+    padding: 8px 15px;
+    border-radius: 30px;
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .searchBox input {
+    height: 100%;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0px 15px;
+    color: #313233;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .search {
+    /* background: #E56841; */
+    background-image: url('https://endlessicons.com/wp-content/uploads/2015/08/search-icon-2-614x460.png');
+    background-size: cover;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .search img {
+    width: 25px;
+  }
+  
+  .mainContainer {
+    flex: 1;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    grid-auto-rows: 7px;
+    margin-top: 10px;
+    justify-content: center;
+    
+  }
+  
+  .pin {
+    border-radius: 16px;
+    background: #444;
+    margin: -100px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /* 24/04 */
+    height: 290px;
+    width: 300px
+  }
+  
+  .pin .mainPic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .pin.small {
+    grid-row-end: span 150;
+  }
+  .pin.medium {
+    grid-row-end: span 160;
+  }
+  .pin.large {
+    grid-row-end: span 170;
+  }
+  
+  .pin .content {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pin:hover .content {
+    bottom: 0;
+    transition: bottom 0.3s;
+    padding: 0px 15px;
+  }
+  
+  .pin:hover .content h3 {
+    color: #feffff;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .pin .search {
+    /* background: #E56841; */
+  
+    /* user profile icon */
+    background-image: url('https://i.pinimg.com/236x/09/d9/a7/09d9a76ea86befcb25e9aa1aae797846.jpg');
+    background-size: cover;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .App {
+      padding: 0 20px;
+    }
+  
+    .menuContainer {
+      padding: 30px 0px;
+      left: 15px;
+      width: unset;
+    }
+  
+    main {
+      margin-left: 75px;
+    }
+  }

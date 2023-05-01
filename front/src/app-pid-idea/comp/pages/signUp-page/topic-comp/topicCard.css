@@ -1,5 +1,6 @@
 .img-topic{
-    position: relative;
+    position: relative ;
+    width: 27% !important;
     
 }
 .img-title{
@@ -16,17 +17,19 @@
     transition: 0.5s;
     cursor:pointer
 }
-/* changes pictures size 28/03 */
 
-/* .imgCard{
-    
-    max-width: 120rems;
-    max-height: 120px;
-} */
-
+.opacity{
+    opacity: 0.4;
+}
 
 /* .clicked{
     opacity: 50;
     border:1px solid palevioletred
+} */
+
+.img-size{
+--bs-gutter-x: 0.01rem !important;
+display: flex !important;
+justify-content: center !important;
+
 }
- */

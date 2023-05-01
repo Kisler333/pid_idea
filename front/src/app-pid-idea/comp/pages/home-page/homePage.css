@@ -66,3 +66,8 @@ color:#E56841;
     .main h3{
         font-family:'Public Sans' ;
     }
+    .dashboardPage{
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+    }

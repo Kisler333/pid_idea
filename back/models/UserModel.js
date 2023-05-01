@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required:[true, 'Please provide a password'],
         minLength:[8, 'The password must contain at least 8 characters'],
-        select: false
+        select: true
     },
     passwordConfirm: {
         type: String,
@@ -41,16 +41,23 @@ const userSchema = new mongoose.Schema({
        
        // select: Female ,Male ,Other
     },
-    country: {
-        type: String,
-        units: {
-            type: String,
-            enum: ['USA', 'Israel'],
-            required : [true, 'Please provide a country']
-        }
+    topics: {
+        type: [String],
+        enum: ["Cooking","Vogue","Dance","Memes","DIY","Drawing","Makeup","Home Decor","Nails"],
+        required : [true,'pick at least one']
+        
+    }
+
+    // country: {
+    //     type: String,
+    //     units: {
+    //         type: String,
+    //         enum: ['USA', 'Israel'],
+    //         required : [true, 'Please provide a country']
+    //     }
        
-       // select: USA ,Israel
-    },
+    //    // select: USA ,Israel
+    // },
     
     //,
     // Genere:{
