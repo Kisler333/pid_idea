@@ -1,9 +1,12 @@
 import React from "react";
 
-
-function Pin({ pinSize =5, imgSrc, name='life style', link="" }) {
+function Pin({ imgSrc, name = 'life style', link = '', pinSize }) {
+  const sizeClass = pinSize || (Math.random() < 0.33 ? 'small' : Math.random() < 0.66 ? 'medium' : 'large');
+// function Pin({ pinSize =5, imgSrc, name='life style', link="" }) {
   return (
-    <div className={`pin ${pinSize}`}>
+    //pinSize instesd 'small'
+    // <div className={`pin ${'large'}`}>
+    <div className={`pin ${sizeClass}`}>
       <img src={imgSrc} alt="" className="mainPic" />
 
       <div className="content">

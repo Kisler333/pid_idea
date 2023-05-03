@@ -36,13 +36,35 @@ const user = await User.findById(id)
                 err
             })}
         }
-exports.signIn =  async(req, res, next) =>{
+exports.signIn =  async(req, res, next) =>{ 
     const {gmail, password, passwordConfirm,age,gender,topics} = req.body
     //,country
     //const topics=["Cooking"]
 try{
 console.log(req.body);
-const newUser = await  User.create({gmail, password, passwordConfirm,age,gender,topics}) 
+// let opcodeTopics=[0,0,0,0,0,0,0,0,0]
+let opcodeTopics=[]
+const topicsList=["Cooking","Vogue","Dance","Memes","DIY","Drawing","Makeup","Home Decor","Nails"]
+console.log("************************");
+
+console.log(topics.length);
+console.log("************************");
+let i=0
+ topics.forEach(topic => {
+    opcodeTopics[i]={hobby_index:topicsList.indexOf(topic)+'',timestamp:Date.now()}
+    // opcodeTopics[i]['hobby_index']=topicsList.indexOf(topic)
+    //opcodeTopics[i]['timestamp']=Date.now()
+    // opcodeTopics[i]=topicsList.indexOf(topic)
+    i++
+    console.log(opcodeTopics);
+});
+// for(const i =0;i<topics.size;i++){
+//     opcodeTopics[i]=topicsList.indexOf(topics[i])
+//     console.log(opcodeTopics);
+
+// }
+const temp =[{hobby_index:0,timestamp: Date.now()},{hobby_index:0,timestamp: Date.now()}]
+const newUser = await  User.create({gmail, password, passwordConfirm,age,gender,temp}) 
 //,country
 //save in db logic
 console.log(newUser);
@@ -147,9 +169,10 @@ exports.logIn = async(req,res,next)=>{
                 })}
             }
 }
-
+Date.now()
 exports.getImages = catchAsync(async(req, res , next)=>{
-    const topics = "pinterest life style,vogue,gymnastic"
+    //pinterest life style,vogue,gymnastic
+    const topics = "ballet,drawing,cooking,makeup"
    const images = await  unsplash.getImages(topics)
 
 res.status(200).json({

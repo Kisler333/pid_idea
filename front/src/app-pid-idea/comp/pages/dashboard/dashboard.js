@@ -71,6 +71,7 @@ const Dashboard = (props) => {
       </div>
 
       <main>
+        <div className='header'>
         <div className="searchBox">
           <input type="text" placeholder="Search" />
           <div className="search">
@@ -79,6 +80,7 @@ const Dashboard = (props) => {
                   alt=""
                 /> */}
           </div>
+        </div>
         </div>
 
         <div className="mainContainer">
