@@ -100,6 +100,7 @@ createUser({gmail, password, passwordConfirm,age,gender})
     // }
     const returnParameters = (e)=>{
       return {gmail, password, passwordConfirm,age,gender,topics}
+      
     }
     // const sharedValue = {
     //   returnParameters

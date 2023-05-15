@@ -10,7 +10,10 @@ router.route('/logIn')
 .post(UserController.logIn)
 
 router.route('/dashboard')
-.get(UserController.getImages)
+.post(UserController.getImages)
+
+router.route('/uploadPin')
+.post(UserController.image)
 
 // router.route('/searchImages')
 // .get(UserController.searchImages)

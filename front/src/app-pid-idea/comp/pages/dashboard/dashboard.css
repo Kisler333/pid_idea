@@ -192,8 +192,22 @@ main {
   /* background: #E56841; */
 
   /* user profile icon */
-  background-image: url('https://i.pinimg.com/236x/09/d9/a7/09d9a76ea86befcb25e9aa1aae797846.jpg');
+  /* https://i.pinimg.com/236x/09/d9/a7/09d9a76ea86befcb25e9aa1aae797846.jpg */
+  /* black icon like */
+  /* https://cdn-icons-png.flaticon.com/512/1518/1518210.png */
+  /* red icon like */
+  /* https://cdn-icons-png.flaticon.com/128/4340/4340223.png */
+  /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Eo_circle_red_heart.svg/2048px-Eo_circle_red_heart.svg.png'); */
+  background-image: url('like.png');
   background-size: cover;
+}
+.active{
+  background-image: url(like\ filled.png) !important;
+  /* background-size: cover; */
+
+}
+.opacity{
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 480px) {
@@ -209,5 +223,12 @@ main {
 
   main {
     margin-left: 75px;
+    
   }
+}
+.hide{
+  display: none;
+}
+.visible{
+  display: flex;
 }

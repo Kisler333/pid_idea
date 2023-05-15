@@ -42,14 +42,13 @@ const userSchema = new mongoose.Schema({
        // select: Female ,Male ,Other
     },
     topics: {
-        type: [{hobby_index: String, timestamp: Number}],
-        default:[{hobby_index:0,timestamp: Date.now()}],
-        //enum: [0,1,2,3,4,5,6,7,8],
-        //"Cooking","Vogue","Dance","Memes","DIY","Drawing","Makeup","Home Decor","Nails"
-        required : [true,'pick at least one']
+        //type:Array,
+        type:[{"hobby_id":String, "hobby_name":String, "timestamp":Number}],
+        //default:[{"hobby_id":0, "hobby_name":"Cooking", "timestamp":Date.now()}],
+    required:[true,"must choose at least 1 topics"]
+},
         
-    }
-
+        
     // country: {
     //     type: String,
     //     units: {

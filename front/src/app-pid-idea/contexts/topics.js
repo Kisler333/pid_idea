@@ -25,6 +25,10 @@ const Provider = ({children}) => {
     return {gmail, password, passwordConfirm,age,gender}
   }
 
+  const getSizeTopics=()=>{
+    return arrayTopics.length
+  }
+
   const addUsersTopic = (topic)=>{
     console.log(topic)
    // setUsersTopics([...usersTopics, topic])
@@ -96,7 +100,8 @@ const Provider = ({children}) => {
       removeUsersTopic,
       returnTopics,
       returnUser,
-      createUser
+      createUser,
+      getSizeTopics
     }
   return (
     <AppContext.Provider value={sharedValue}>

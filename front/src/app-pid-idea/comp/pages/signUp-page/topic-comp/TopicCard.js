@@ -5,11 +5,11 @@ import AppContext from '../../../../contexts/topics'
 const TopicCard = ({topic}) => {
   const [clicked, setClicked] = useState(false)
   
-  const {removeUsersTopic, addUsersTopic} = useContext(AppContext)
+  const {removeUsersTopic, addUsersTopic,getSizeTopics} = useContext(AppContext)
  const handleTopicInput = (e)=>{
   console.log(e)
   //const situation=document.getElementById(`topic-${topic.title}`).classList.
-  if(!clicked){
+  if((!clicked)&&(getSizeTopics()<5)){
     setClicked(true)
     
     //clicked=true

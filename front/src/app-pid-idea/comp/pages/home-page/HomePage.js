@@ -36,7 +36,7 @@ const HomePage = () => {
   }
   if (mode ==='continue'){
     welcome = <div ><h4 className='text-dark' >Tell us what you’re interested in</h4>
-    <h6 className='subtitle'>*Pick at least 1 topic</h6></div>
+    <h6 className='subtitle'>*Pick at least 1 topic,max 5</h6></div>
      content = <SignUp/>
     //content = <Dashboard/>
   }
